@@ -63,16 +63,19 @@ spec:
       git clone https://${GITHOSTACCESSTOKEN}@github.com/$(params.OPS_GIT_REPO)
 
       # set image for dev deployment
+      echo "listing directory--->"
+
+      pwd
 
       ls
 
-      cd /workspace/source/localgitops/environments/dev/apps/$(params.SRC_GIT_NAME)/services/python-devfile/base/config
+      cd /workspace/source/localgitops/$(params.OPS_GIT_NAME}/environments/dev/apps/$(params.SRC_GIT_NAME)/services/python-devfile/base/config
 
       kustomize edit set image $(params.IMAGE)
 
       # set image for stage deployment
 
-      cd /workspace/source/localgitops/gitops/environments/stage/apps/$(params.SRC_GIT_NAME)/services/python-devfile/base/config
+      cd /workspace/source/localgitops/$(params.OPS_GIT_NAME)/environments/stage/apps/$(params.SRC_GIT_NAME)/services/python-devfile/base/config
 
       kustomize edit set image $(params.IMAGE)
 
