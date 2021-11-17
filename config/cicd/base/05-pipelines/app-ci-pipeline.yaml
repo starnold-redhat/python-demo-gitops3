@@ -93,9 +93,9 @@ spec:
   - name: update-ops-repo
     params:
     - name: OPS_GIT_REPO
-      value: "starnold-redhat/python-gitops.git"
+      value: "starnold-redhat/python-demo-gitops3.git"
     - name: OPS_GIT_NAME
-      value: 'python-gitops'
+      value: 'python-demo-gitops3'
     - name: GIT_USER_NAME
       value: 'starnold-redhat'
     - name: GIT_USER_EMAIL
