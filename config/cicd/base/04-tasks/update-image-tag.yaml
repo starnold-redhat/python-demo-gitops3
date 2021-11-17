@@ -81,7 +81,7 @@ spec:
 
       # Push back to git
 
-      cd /workspace/source/localgitops/gitops
+      cd /workspace/source/localgitops/$(params.OPS_GIT_NAME)
 
       git add .
 
